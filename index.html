@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smokewell Apparel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" id="storefront-fonts-css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,700,900&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="icon" type="text/css" href="assets/images/icon.ico">
+</head>
+<body>
+	<div id="special-message-box">
+		<h2 id="special-message">Free shipping on all orders!</h2>
+	</div>
+	<div id="main-container">
+		<header>
+			<div id="header-section-left">
+				<i id="nav-icon" class="fa fa-bars" onclick="toggleNav()"></i>
+			</div>
+			<div id="header-section-center">
+				<a href=""><img id="main-logo" src="assets/images/logo.png" alt="Smokewell Apparel"></a>
+			</div>
+			<div id="header-section-right">
+				<div id="cart-icon-container" onclick="toggleCart()">
+					<i id="cart-icon" class="fa fa-shopping-cart" aria-hidden="true"></i>
+					<span id="cart-counter">2</span>
+				</div>
+			</div>
+			<div id="cart-container">
+				<i id="cart-close-button" class="close-button fas fa-times" onclick="toggleCart()"></i>
+				<div id="cart">
+					<a class="cart-row" href=""><span class="nav-icons"><i class="fas fa-tshirt"></i></span> Shop T-Shirts</a>
+					<a class="cart-row" href=""><span class="nav-icons"><i class="fas fa-info"></i></span> About Us</a>
+					<a class="cart-row" href=""><span class="nav-icons"><i class="fas fa-question"></i></span> FAQ</a>
+				</div>
+			</div>
+			<nav  id="menu-container">
+				<i id="menu-close-button" class="close-button fas fa-times" onclick="toggleNav()"></i>
+				<div id="mobile-nav-container">
+					<a id="selected" class="nav-link" href=""><span class="nav-icons"><i class="fa fa-home"></i></span> Home</a>
+					<a class="nav-link" href=""><span class="nav-icons"><i class="fas fa-tshirt"></i></span> Shop T-Shirts</a>
+					<a class="nav-link" href=""><span class="nav-icons"><i class="fas fa-info"></i></span> About Us</a>
+					<a class="nav-link" href=""><span class="nav-icons"><i class="fas fa-question"></i></span> FAQ</a>
+					<a class="nav-link" href=""><span class="nav-icons"><i class="fas fa-comments"></i></span> Contact</a>
+					<a class="nav-link" href=""><span class="nav-icons"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-counter">2</span></span> Checkout</a>
+				</div>
+			</nav>
+		</header>
+		<main id="main-content">
+		</main>
+	</div>
+	<img id="homepage-image" src="assets/images/weedplant.png" alt="">
+	<footer>
+		<div id="copyright">2018&copy; Smokewell Apparel. All Rights Reserved.</div>
+	</footer>
+</body>
+</html>
