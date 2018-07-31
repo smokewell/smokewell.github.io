@@ -117,11 +117,11 @@ header {
 }
 #cart-counter {
     background-color: #cc0000;
-    border-radius: 3rem;
+    border-radius: 1.6rem;
     width: 1.6rem;
     height: 1.6rem;
     line-height: 1.6rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-left: .1rem;
     color: #fff;
     vertical-align: top;
