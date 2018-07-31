@@ -44,7 +44,7 @@ function openCart() {
 	var cart = document.getElementById("cart-container");
 	// var cartCloseButton = document.getElementById("cart-close-button");
 	var pageWidth = window.innerWidth;
-	if (pageWidth > 1023) {
+	if (pageWidth > 768) {
 		cart.style.width = "50%";
 	} else {
 		cart.style.width = "100%";
@@ -80,7 +80,7 @@ function openNav() {
 	var menu = document.getElementById("menu-container");
 	// var navCloseButton = document.getElementById("menu-close-button");
 	var pageWidth = window.innerWidth;
-	if (pageWidth > 1023) {
+	if (pageWidth > 768) {
 		menu.style.width = "90%";
     } else {
     	menu.style.width = "100%";
@@ -107,7 +107,7 @@ function resizeNav(navWidth) {
 	var pageWidth = window.innerWidth;
 	// navCloseButton.style.position = "absolute";
 	menu.style.transition = "all 0ms linear";
-	if (pageWidth > 1023) {
+	if (pageWidth > 768) {
 		openNav();
 	} else {
 		menu.style.width = "0px";
