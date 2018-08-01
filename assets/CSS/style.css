@@ -403,7 +403,7 @@ i.cart-remove-button {
 	}
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 768px){
 	#homepage-image {
 		max-width: 100%;
 	}
