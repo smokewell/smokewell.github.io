@@ -43,7 +43,7 @@ function getAspectRatio() {
 function openCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.outerWidth;
-	document.body.style.overflow = "hidden";
+	document.body.style.overflowY = "hidden";
 	if (pageWidth > 768) {
 		cart.style.width = "50%";
 	} else {
@@ -54,7 +54,7 @@ function openCart() {
 function toggleCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.outerWidth;
-	document.body.style.overflow = "scroll";
+	document.body.style.overflowY = "scroll";
 	cart.style.transition = "all 250ms linear";
 	if (cart.style.width == "" || cart.style.width == "0px") {
 		openCart();
@@ -66,7 +66,7 @@ function toggleCart() {
 function resizeCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.outerWidth;
-	document.body.style.overflow = "scroll";
+	document.body.style.overflowY = "scroll";
 	cart.style.transition = "all 0ms linear";
 	if (cart.style.width !== "" && cart.style.width !== "0px") {
 		openCart();
@@ -80,14 +80,14 @@ function openNav() {
 		menu.style.width = "90%";
     } else {
     	menu.style.width = "100%";
-    	document.body.style.overflow = "hidden";
+    	document.body.style.overflowY = "hidden";
     }
 }
 
 function toggleNav() {
 	var menu = document.getElementById("menu-container");
 	var pageWidth = window.outerWidth;
-	document.body.style.overflow = "scroll";
+	document.body.style.overflowY = "scroll";
 	menu.style.transition = "all 250ms linear";
 	if (menu.style.width == "" || menu.style.width == "0px") {
 		openNav();
@@ -99,7 +99,7 @@ function toggleNav() {
 function resizeNav(navWidth) {
 	var menu = document.getElementById("menu-container");
 	var pageWidth = window.outerWidth;
-	document.body.style.overflow = "scroll";
+	document.body.style.overflowY = "scroll";
 	menu.style.transition = "all 0ms linear";
 	if (menu.style.width == "" || (pageWidth <= 768 && menu.style.width == "90%")) {
 		menu.style.width = "0px";
