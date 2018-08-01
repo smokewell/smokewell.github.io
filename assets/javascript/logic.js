@@ -96,8 +96,10 @@ function resizeNav(navWidth) {
 	menu.style.transition = "all 0ms linear";
 	if (pageWidth > 768) {
 		openNav();
-	} else {
+	} else if (menu.style.width == "90%") {
 		menu.style.width = "0px";
+	} else {
+		openNav();
 	}
 }
 
