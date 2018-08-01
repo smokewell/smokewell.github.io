@@ -165,7 +165,7 @@ nav {
 .nav-link {
 	font-family: 'Liberator', sans-serif;
 	text-transform: uppercase;
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 	text-decoration: none;
 	color: #afafaf;
 	font-weight: 600;
@@ -195,6 +195,9 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+}
+#nav-return {
+	display: none;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -230,8 +233,7 @@ i.cart-remove-button {
 }
 .cart-product-name {
 	font-size: 1.5rem;
-	letter-spacing: 0;
-	text-transform: uppercase;
+	letter-spacing: .1rem;
 	display: inline-block;
 	cursor: pointer;
 }
@@ -241,7 +243,6 @@ i.cart-remove-button {
 .cart-product-info {
 	display: block;
 	font-size: 1.5rem;
-	text-transform: uppercase;
 }
 .cart-product-image {
 	width: 4rem;
@@ -256,7 +257,6 @@ i.cart-remove-button {
 .cart-row {
 	display: block;
 	font-size: 2rem;
-	letter-spacing: 0;
 	color: #bababa;
 	text-align: left;
 	border-bottom: 1px solid #bababa;
@@ -280,7 +280,7 @@ i.cart-remove-button {
 #cart {
 	border: 1px solid #bababa;
 	width: 90%;
-	margin: 10rem auto 0 auto;
+	margin: 0 auto;
 	border-radius: 12px;
 	display: block;
 	font-family: 'Liberator', sans-serif;
@@ -304,7 +304,31 @@ i.cart-remove-button {
 	border: 1px solid #7facff;
 	color: #7facff;
 }
-
+#cart-title {
+	font-family: 'Liberator', sans-serif;
+	color: #fff;
+    font-size: 3rem;
+    margin: 3rem auto;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+}
+#cart-return {
+	font-family: 'Liberator', sans-serif;
+	color: #fff;
+	font-size: 1.2rem;
+	margin-top: 3rem;
+	cursor: pointer;
+}
+#cart-return:hover {
+	color: #7facff;
+}
+#cart-total {
+	color: #fff;
+    font-size: 1.5rem;
+}
+#total-label {
+	letter-spacing: .1rem;
+}
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// MEDIA QUERIES //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
@@ -324,6 +348,9 @@ i.cart-remove-button {
 		margin: 12rem 0 3rem 0;
 		padding-right: 2rem;
 	}
+	#cart-title {
+		margin: 6rem auto;
+	} 
 }
 @media screen and (max-width: 768px) {
 	.cart-product-image {
@@ -381,9 +408,17 @@ i.cart-remove-button {
 	#mobile-nav-container {
 		border: 1px solid #bababa;
     	width: 90%;
-    	margin: 10rem auto;
+    	margin: 10rem auto 0 auto;
     	border-radius: 12px;
     	display: block;
+	}
+	#nav-return {
+		font-family: 'Liberator', sans-serif;
+		color: #fff;
+		font-size: 1.2rem;
+		margin-top: 3rem;
+		cursor: pointer;
+		display: block;
 	}
 }
 
