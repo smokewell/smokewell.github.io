@@ -43,6 +43,9 @@ li {
 	margin: 0 auto;
 	flex: 1;
 }
+#homepage-button {
+	display: none
+}
 
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// SPECIAL MESSAGE ////////////////////////////////////////////////////////////
@@ -458,8 +461,24 @@ i.cart-remove-button {
 	#homepage-image {
 		max-width: 100%;
 	}
+	#homepage-button {
+	    border: 1px solid #000;
+	    color: #000;
+	    width: 25rem;
+	    margin: 3rem auto;
+	    border-radius: 12px;
+	    display: block;
+	    text-transform: uppercase;
+	    padding: .75rem;
+	    background-color: transparent;
+	    font-weight: 600;
+	    font-size: 2rem;
+	}
+	#shirt-icon {
+		margin-right: 2rem;
+	}
 	#main-logo {
-		margin-bottom: 6rem;
+		margin-bottom: 8rem;
 	}
 	#nav-icon {
 		margin: 12rem 0 3rem 0;
