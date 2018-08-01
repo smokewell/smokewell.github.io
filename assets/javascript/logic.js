@@ -66,6 +66,7 @@ function toggleCart() {
 function resizeCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.outerWidth;
+	document.body.style.overflow = "scroll";
 	cart.style.transition = "all 0ms linear";
 	if (cart.style.width !== "" && cart.style.width !== "0px") {
 		openCart();
@@ -98,6 +99,7 @@ function toggleNav() {
 function resizeNav(navWidth) {
 	var menu = document.getElementById("menu-container");
 	var pageWidth = window.outerWidth;
+	document.body.style.overflow = "scroll";
 	menu.style.transition = "all 0ms linear";
 	if (menu.style.width == "" || (pageWidth <= 768 && menu.style.width == "90%")) {
 		menu.style.width = "0px";
