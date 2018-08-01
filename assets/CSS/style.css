@@ -327,6 +327,7 @@ i.cart-remove-button {
 	font-size: 1.25rem;
 	margin-top: 3rem;
 	cursor: pointer;
+	padding-bottom: 3rem;
 }
 #cart-return:hover {
 	transform: scale(1.05);
@@ -425,6 +426,7 @@ i.cart-remove-button {
 		margin-top: 3rem;
 		cursor: pointer;
 		display: block;
+		padding-bottom: 3rem;
 	}
 	#nav-return:hover {
 		transform: scale(1.05);
