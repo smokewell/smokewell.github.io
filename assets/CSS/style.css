@@ -182,7 +182,7 @@ nav {
 .topnav .icon {
 	display: none;
 }
-#selected {
+.selected {
 	color: #000;
 }
 #menu-close-button {
@@ -402,7 +402,7 @@ i.cart-remove-button {
 	#menu-close-button {
 		display: inline-block;
 	}
-	#selected {
+	.selected {
 		color: #bababa;
 	}
 	#nav-icon {
