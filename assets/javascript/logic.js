@@ -43,6 +43,7 @@ function getAspectRatio() {
 function openCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.outerWidth;
+	document.body.style.overflow = "hidden";
 	if (pageWidth > 768) {
 		cart.style.width = "50%";
 	} else {
@@ -53,6 +54,7 @@ function openCart() {
 function toggleCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.outerWidth;
+	document.body.style.overflow = "scroll";
 	cart.style.transition = "all 250ms linear";
 	if (cart.style.width == "" || cart.style.width == "0px") {
 		openCart();
@@ -77,12 +79,14 @@ function openNav() {
 		menu.style.width = "90%";
     } else {
     	menu.style.width = "100%";
+    	document.body.style.overflow = "hidden";
     }
 }
 
 function toggleNav() {
 	var menu = document.getElementById("menu-container");
 	var pageWidth = window.outerWidth;
+	document.body.style.overflow = "scroll";
 	menu.style.transition = "all 250ms linear";
 	if (menu.style.width == "" || menu.style.width == "0px") {
 		openNav();
