@@ -94,9 +94,9 @@ function resizeNav(navWidth) {
 	var menu = document.getElementById("menu-container");
 	var pageWidth = window.innerWidth;
 	menu.style.transition = "all 0ms linear";
-	if (pageWidth > 768) {
-		openNav();
-	} else if (menu.style.width == "90%") {
+	if (menu.style.width == "" || (pageWidth <= 768 && menu.style.width == "90%")) {
+		menu.style.width = "0px";
+	} else if (menu.style.width == "0px" && pageWidth <= 768) {
 		menu.style.width = "0px";
 	} else {
 		openNav();
@@ -113,7 +113,7 @@ window.addEventListener("load", function() {
 
 window.addEventListener("resize", function() {
     scaleRootSize(8);
-    resizeNav("90%");
+    resizeNav();
     resizeCart()
 });
 
