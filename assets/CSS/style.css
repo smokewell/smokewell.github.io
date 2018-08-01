@@ -380,6 +380,12 @@ i.cart-remove-button {
 	.nav-link:last-child {
 		border-bottom: none;
 	}
+	#special-message {
+		font-size: 1.5rem;
+	}
+	#copyright {
+		font-size: 1.4rem;
+	}
 	#menu-container {
 		width: 0px;
 		min-height: 100%;
