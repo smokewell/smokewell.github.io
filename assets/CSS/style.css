@@ -246,7 +246,7 @@ i.cart-remove-button {
 	letter-spacing: .1rem;
 	display: inline-block;
 	cursor: pointer;
-	color: #11ddff;
+	color: #99ff11;
 }
 .cart-product-name:hover {
 	transform: scale(1.05);
@@ -297,7 +297,7 @@ i.cart-remove-button {
 	font-family: 'Liberator', sans-serif;
 }
 #cart-checkout-button {
-	color: #11ddff;
+	color: #99ff11;
 	border: 1px solid #bababa;
 	width: 90%;
 	margin: 3rem auto;
@@ -326,7 +326,7 @@ i.cart-remove-button {
 }
 #cart-return {
 	font-family: 'Liberator', sans-serif;
-	color: #11ddff;
+	color: #99ff11;
 	font-size: 1.25rem;
 	margin-top: 3rem;
 	cursor: pointer;
@@ -358,14 +358,14 @@ i.cart-remove-button {
 		display: block;
 		font-size: 2rem;
 		letter-spacing: 0;
-    	color: #11ddff;
+    	color: #99ff11;
     	text-align: left;
     	border-bottom: 1px solid #bababa;
     	padding: 1rem 1rem;
     	font-weight: 400;
 	}
 	.nav-link:hover {
-		color: #11ddff;
+		color: #99ff11;
 		font-size: 2.1rem;
 		transition: all 150ms linear;
 	}
@@ -424,7 +424,7 @@ i.cart-remove-button {
 	}
 	#nav-return {
 		font-family: 'Liberator', sans-serif;
-		color: #11ddff;
+		color: #99ff11;
 		font-size: 1.5rem;
 		margin-top: 3rem;
 		cursor: pointer;
