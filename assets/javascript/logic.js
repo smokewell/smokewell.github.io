@@ -5,10 +5,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function scaleRootSize(min) {
-	var vw = window.innerWidth/100;
-	var vh = window.innerHeight/100;
-	var pageWidth = window.innerWidth;
-	var pageHeight = window.innerHeight;
+	var vw = window.outerWidth/100;
+	var vh = window.outerHeight/100;
+	var pageWidth = window.outerWidth;
+	var pageHeight = window.outerHeight;
 	var aspectRatio = getAspectRatio();
 	console.log(aspectRatio);
 	if (pageWidth > pageHeight && vw > min) {
@@ -25,8 +25,8 @@ function scaleRootSize(min) {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function getAspectRatio() {
-	var pageWidth = window.innerWidth;
-	var pageHeight = window.innerHeight;
+	var pageWidth = window.outerWidth;
+	var pageHeight = window.outerHeight;
     if (pageWidth > pageHeight) {
     	var aspectRatio = pageWidth/pageHeight;
     } else if (pageHeight > pageWidth){
@@ -34,6 +34,7 @@ function getAspectRatio() {
     } else {
     	var aspectRatio = 1;
     }
+    var aspectRatio = Math.round((aspectRatio + 0.00001)*100)/100;
     return aspectRatio;
 }
 
@@ -41,7 +42,7 @@ function getAspectRatio() {
 
 function openCart() {
 	var cart = document.getElementById("cart-container");
-	var pageWidth = window.innerWidth;
+	var pageWidth = window.outerWidth;
 	if (pageWidth > 768) {
 		cart.style.width = "50%";
 	} else {
@@ -51,7 +52,7 @@ function openCart() {
 
 function toggleCart() {
 	var cart = document.getElementById("cart-container");
-	var pageWidth = window.innerWidth;
+	var pageWidth = window.outerWidth;
 	cart.style.transition = "all 250ms linear";
 	if (cart.style.width == "" || cart.style.width == "0px") {
 		openCart();
@@ -62,7 +63,7 @@ function toggleCart() {
 
 function resizeCart() {
 	var cart = document.getElementById("cart-container");
-	var pageWidth = window.innerWidth;
+	var pageWidth = window.outerWidth;
 	cart.style.transition = "all 0ms linear";
 	if (cart.style.width !== "" && cart.style.width !== "0px") {
 		openCart();
@@ -71,7 +72,7 @@ function resizeCart() {
 
 function openNav() {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.innerWidth;
+	var pageWidth = window.outerWidth;
 	if (pageWidth > 768) {
 		menu.style.width = "90%";
     } else {
@@ -81,7 +82,7 @@ function openNav() {
 
 function toggleNav() {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.innerWidth;
+	var pageWidth = window.outerWidth;
 	menu.style.transition = "all 250ms linear";
 	if (menu.style.width == "" || menu.style.width == "0px") {
 		openNav();
@@ -92,7 +93,7 @@ function toggleNav() {
 
 function resizeNav(navWidth) {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.innerWidth;
+	var pageWidth = window.outerWidth;
 	menu.style.transition = "all 0ms linear";
 	if (menu.style.width == "" || (pageWidth <= 768 && menu.style.width == "90%")) {
 		menu.style.width = "0px";
@@ -114,7 +115,7 @@ window.addEventListener("load", function() {
 window.addEventListener("resize", function() {
     scaleRootSize(8);
     resizeNav();
-    resizeCart()
+    resizeCart();
 });
 
 
