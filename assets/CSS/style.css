@@ -81,6 +81,40 @@ li {
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
+/////// ARCHIVE ////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////*/
+
+#archive-container {
+	display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 3rem auto;
+}
+.archive-product-container {
+	width: 25%;
+	text-align: center;
+	margin: 1rem 0;
+	cursor: pointer;
+}
+.archive-product-container:hover {
+	transform: scale(1.05);
+	transition: all 150ms linear;
+}
+.archive-product-container:hover .archive-product-title {
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+}
+.archive-product-image {
+	width: 90%;
+}
+.archive-product-title {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	color: #000;
+    letter-spacing: .25rem;
+    font-weight: 600;
+    font-family: 'Liberator', sans-serif;
+}
+/*//////////////////////////////////////////////////////////////////////////////////
 /////// HEADER /////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
 
@@ -352,11 +386,27 @@ i.cart-remove-button {
 #total-label {
 	letter-spacing: .1rem;
 }
+
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// MEDIA QUERIES //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 768px) {
+	.archive-product-container {
+		width: 33.33%;
+	}
+	.archive-product-title {
+	    border: 1px solid #000;
+	    width: 90%;
+	    border-radius: 8px;
+	    padding: 1rem 0;
+	    background-color: transparent;
+	    margin: 0 auto;
+	    text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+	}
+	#archive-container {
+		margin: 0 auto 3rem auto;
+	}
 	.cart-product-image {
 		width: 6rem;
 	}
@@ -484,7 +534,14 @@ i.cart-remove-button {
 		margin-right: 2rem;
 	}
 }
-
+@media screen and (max-width: 512px) {
+	.archive-product-container {
+		width: 50%;
+	}
+	.archive-product-title {
+		font-size: 1rem;
+	}
+}
 @media screen and (orientation: portrait) and (max-width: 768px){
 	.nav-link {
 		padding: 2rem 1rem;
