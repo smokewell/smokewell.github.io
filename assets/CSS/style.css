@@ -46,9 +46,6 @@ li {
 	margin: 0 auto;
 	flex: 1;
 }
-#homepage-button {
-	display: none
-}
 
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// SPECIAL MESSAGE ////////////////////////////////////////////////////////////
@@ -77,6 +74,9 @@ li {
 #homepage-image {
 	margin: 0 auto; 
 	max-width: 57%;
+}
+#homepage-button {
+	display: none
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -113,14 +113,14 @@ header {
 #cart-icon-container {
 	cursor: pointer;
     padding: 4rem 0 3rem 0;
-    animation: bounce 1s cubic-bezier(.36,.07,.19,.97) both;
+    animation: money-hop 1s cubic-bezier(.36,.07,.19,.97) both;
   	transform: translate3d(0, 0, 0);
   	backface-visibility: hidden;
   	perspective: 1000px;
 }
 #cart-icon-container:hover #cart-icon, 
 #cart-icon-container:hover #cart-counter {
-	animation: bounce 1s cubic-bezier(.36,.07,.19,.97) both;
+	animation: money-hop 1s cubic-bezier(.36,.07,.19,.97) both;
   	transform: translate3d(0, 0, 0);
   	backface-visibility: hidden;
   	perspective: 1000px;
@@ -391,6 +391,9 @@ i.cart-remove-button {
 	.nav-link:last-child {
 		border-bottom: none;
 	}
+	.nav-link:hover {
+		transform: scale(1);
+	}
 	#menu-container {
 		width: 0px;
 		min-height: 100%;
@@ -530,13 +533,13 @@ i.cart-remove-button {
     transform: translate3d(0, 4px, 0);
   }
 }
-@-webkit-keyframes bounce { 
+@-webkit-keyframes money-hop { 
 	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
 	40% {-webkit-transform: translateY(-30px);} 
 	60% {-webkit-transform: translateY(-15px);} 
 } 
 
-@keyframes bounce { 
+@keyframes money-hop { 
 	0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
 	40% {transform: translateY(-30px);} 
 	60% {transform: translateY(-15px);} 
