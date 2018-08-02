@@ -13,6 +13,9 @@ body {
 li {
 	text-decoration: none;
 }
+.click-me {
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+}
 .clearfix:after {
     content: "";
     display: block;
@@ -122,6 +125,10 @@ header {
   	backface-visibility: hidden;
   	perspective: 1000px;
 }
+#cart-icon-container:hover #cart-icon {
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+}
+
 #cart-counter {
     background-color: #cc0000;
     border-radius: 1.6rem;
@@ -174,19 +181,20 @@ nav {
 	text-transform: uppercase;
 	font-size: 1.4rem;
 	text-decoration: none;
-	color: #afafaf;
+	color: #000;
 	font-weight: 600;
 	letter-spacing: .1rem;
 	padding: .5rem 2rem;
 }
 .nav-link:hover {
-	color: #000;
+	transform: scale(1.05);
+	transition: all 50ms linear;
 }
 .topnav .icon {
 	display: none;
 }
 .selected {
-	color: #000;
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
 }
 #menu-close-button {
 	display: none;
@@ -407,6 +415,7 @@ i.cart-remove-button {
 	}
 	.selected {
 		color: #bababa;
+		text-shadow: none;
 	}
 	#nav-icon {
 		display: inline-block;
@@ -465,7 +474,6 @@ i.cart-remove-button {
 	    font-weight: 600;
 	    font-size: 2rem;
 	    letter-spacing: .1rem;
-	    text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
 	}
 	#shirt-icon {
 		margin-right: 2rem;
