@@ -371,8 +371,8 @@ i.cart-remove-button {
 	font-family: 'Liberator', sans-serif;
 	color: #99ff11;
 	font-size: 1.25rem;
-	margin-top: 3rem;
 	cursor: pointer;
+	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
 #cart-return:hover {
@@ -489,9 +489,9 @@ i.cart-remove-button {
 		font-family: 'Liberator', sans-serif;
 		color: #99ff11;
 		font-size: 1.5rem;
-		margin-top: 3rem;
 		cursor: pointer;
 		display: block;
+		padding-top: 3rem;
 		padding-bottom: 3rem;
 	}
 	#nav-return:hover {
