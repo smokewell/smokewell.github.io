@@ -452,15 +452,6 @@ i.cart-remove-button {
 	    line-height: 2rem;
 	    margin-right: 3rem;
 	}
-}
-
-@media screen and (orientation: portrait) and (max-width: 768px){
-	.nav-link {
-		padding: 2rem 1rem;
-	}
-	#homepage-image {
-		max-width: 100%;
-	}
 	#homepage-button {
 	    border: 1px solid #000;
 	    color: #000;
@@ -478,6 +469,15 @@ i.cart-remove-button {
 	}
 	#shirt-icon {
 		margin-right: 2rem;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-width: 768px){
+	.nav-link {
+		padding: 2rem 1rem;
+	}
+	#homepage-image {
+		max-width: 100%;
 	}
 	#main-logo {
 		margin-bottom: 8rem;
