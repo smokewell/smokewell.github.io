@@ -24,9 +24,9 @@ li {
 }
 .close-button {
 	font-size: 2rem;
-	color: #000;
+	color: #2e2e2e;
 	background-color: #fff;
-    border: 2px solid #000;
+    border: 2px solid #2e2e2e;
     width: 2rem;
     height: 2rem;
     line-height: 2.75rem;
@@ -41,6 +41,16 @@ li {
 	transform: rotate(90deg);
 	transition: transform 150ms linear;
 }
+.page-title {
+	font-weight: 600;
+    font-family: 'Liberator', sans-serif;
+    color: #2e2e2e;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
 #main-container {
 	width: 100%;
 	max-width: 1280px;
@@ -53,7 +63,7 @@ li {
 //////////////////////////////////////////////////////////////////////////////////*/
 
 #special-message-box {
-	background-color: #000;
+	background-color: #2e2e2e;
 	width: 100%;
 	padding: .5rem 0;
 	text-align: center;
@@ -109,7 +119,7 @@ li {
 .archive-product-title {
 	text-transform: uppercase;
 	font-size: 1.5rem;
-	color: #000;
+	color: #2e2e2e;
     letter-spacing: .25rem;
     font-weight: 600;
     font-family: 'Liberator', sans-serif;
@@ -119,9 +129,9 @@ li {
 //////////////////////////////////////////////////////////////////////////////////*/
 
 .accordion {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	background-color: #eee;
-    color: #000;
+    color: #2e2e2e;
     cursor: pointer;
     padding: .5rem 1.5rem;
     width: 100%;
@@ -131,13 +141,13 @@ li {
     border-top: solid 1px #afafaf;
     font-weight: 600;
     font-family: 'Liberator', sans-serif;
-    text-transform: uppercase;
 }
 .accordion:first-child {
 	border-top: none;
 }
 .accordion:hover {
-	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+	color: #fff;
+	background-color: #2e2e2e;
 }
 .panel {
     max-height: 0;
@@ -146,7 +156,6 @@ li {
 }
 .accordion:after {
     content: '\027e9';
-	color: #000;
     float: right;
     font-weight: bold;
 }
@@ -196,7 +205,7 @@ header {
 	transition: all 150ms linear;
 }
 #cart-icon {
-	color: #000;
+	color: #2e2e2e;
 	font-size: 2.5rem;
 }
 #cart-icon-container {
@@ -231,7 +240,7 @@ header {
     position: absolute;
 }
 #nav-icon {
-	color: #000;
+	color: #2e2e2e;
 	font-size: 2.5rem;
 	display: none;
 }
@@ -243,7 +252,7 @@ header {
 footer {
 	width: 100%;
 	text-align: center;
-	background-color: #000;
+	background-color: #2e2e2e;
 	padding: 5px 0;
 }
 #copyright {
@@ -270,7 +279,7 @@ nav {
 	text-transform: uppercase;
 	font-size: 1.5rem;
 	text-decoration: none;
-	color: #000;
+	color: #2e2e2e;
 	font-weight: 600;
 	letter-spacing: .1rem;
 	padding: .5rem 4rem;
@@ -278,6 +287,7 @@ nav {
 .nav-link:hover {
 	transform: scale(1.05);
 	transition: all 50ms linear;
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
 }
 .topnav .icon {
 	display: none;
@@ -449,7 +459,7 @@ i.cart-remove-button {
 		width: 33.33%;
 	}
 	.archive-product-title {
-	    border: 1px solid #000;
+	    border: 1px solid #2e2e2e;
 	    width: 90%;
 	    font-size: 1.25rem;
 	    border-radius: 8px;
@@ -459,7 +469,7 @@ i.cart-remove-button {
 	    text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
 	}
 	#archive-container {
-		margin: 0 auto 3rem auto;
+		margin: 0rem auto 3rem auto;
 	}
 	.cart-product-image {
 		width: 6rem;
@@ -569,8 +579,8 @@ i.cart-remove-button {
 	    margin-right: 3rem;
 	}
 	#homepage-button {
-	    border: 1px solid #000;
-	    color: #000;
+	    border: 1px solid #2e2e2e;
+	    color: #2e2e2e;
 	    width: 25rem;
 	    margin: 3rem auto;
 	    border-radius: 8px;
@@ -598,14 +608,13 @@ i.cart-remove-button {
 		display: inline-block;
 		width: 20%;
 	}
-	#faq-container {
-	}
 	.panel-content {
 		font-size: 1.5rem;
 		padding: 1.5rem;
 	}	
 	.accordion {
-		    padding: 1rem 1.5rem;
+	    padding: 1rem 1.5rem;
+	    font-size: 1.5rem;
 	}
 }
 @media screen and (max-width: 512px) {
@@ -652,6 +661,10 @@ i.cart-remove-button {
 	} 
 	#mobile-nav-container {
 		margin: 6rem auto 4rem auto;
+	}
+	.page-title {
+	    font-size: 1.5rem;
+	    margin: 0 auto 6rem auto;
 	}
 }
 
