@@ -115,6 +115,60 @@ li {
     font-family: 'Liberator', sans-serif;
 }
 /*//////////////////////////////////////////////////////////////////////////////////
+/////// FAQ ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////*/
+
+.accordion {
+	font-size: 1.5rem;
+	background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    border-top: solid 1px #afafaf;
+    font-weight: 600;
+    font-family: 'Liberator', sans-serif;
+    text-transform: uppercase;
+}
+.accordion:first-child {
+	border-top: none;
+}
+.accordion:hover {
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+}
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+    content: '\027e9';
+	color: #000;
+    float: right;
+    font-weight: bold;
+}
+.open:after {
+    transform:rotate(90deg);
+}
+.panel-content {
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-align: justify;
+	line-height: 1.5;
+}
+#faq-container {
+	width: 90%;
+	display: block;
+	margin: 3rem auto;
+	border: solid 1px #afafaf;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////
 /////// HEADER /////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
 
@@ -543,6 +597,15 @@ i.cart-remove-button {
 	#header-section-right {
 		display: inline-block;
 		width: 20%;
+	}
+	#faq-container {
+	}
+	.panel-content {
+		font-size: 1.5rem;
+		padding: 1.5rem;
+	}	
+	.accordion {
+		    padding: 1rem 1.5rem;
 	}
 }
 @media screen and (max-width: 512px) {

@@ -39,6 +39,32 @@ function getAspectRatio() {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
+////// THIS FUNCTION RETURNS THE ASPECT RATIO OF THE USER'S DEVICE ///////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+function toggleAccordion() {
+	var accordion = document.getElementsByClassName("accordion");
+	for (i = 0; i < accordion.length; i++) {
+	  	accordion[i].addEventListener("click", function() {
+		    this.classList.toggle("open");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight) {
+		     	panel.style.maxHeight = null;
+		    } 
+		    openAccordionPanels();
+		});
+	};
+}
+
+function openAccordionPanels() {
+	var openAccordions = document.getElementsByClassName("open");
+	for (i = 0; i < openAccordions.length; i++) {
+		var openPanel = openAccordions[i].nextElementSibling;
+		openPanel.style.maxHeight = openPanel.scrollHeight + "px";
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 function openCart() {
 	var cart = document.getElementById("cart-container");
@@ -116,12 +142,14 @@ function resizeNav(navWidth) {
 
 window.addEventListener("load", function() {
     scaleRootSize(8);
+    toggleAccordion();
 });
 
 window.addEventListener("resize", function() {
     scaleRootSize(8);
     resizeNav();
     resizeCart();
+    openAccordionPanels();
 });
 
 
