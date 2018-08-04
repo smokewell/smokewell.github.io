@@ -44,10 +44,10 @@ function positionHeader() {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function scaleRootSize(min) {
-	var vw = window.innerWidth/100;
-	var vh = window.innerHeight/100;
-	var pageWidth = window.innerWidth;
-	var pageHeight = window.innerHeight;
+	var vw = window.outerWidth/100;
+	var vh = window.outerWidth/100;
+	var pageWidth = window.outerWidth;
+	var pageHeight = window.outerWidth;
 	var aspectRatio = getAspectRatio();
 	console.log(aspectRatio);
 	if (pageWidth > pageHeight && vw > min) {
@@ -64,8 +64,8 @@ function scaleRootSize(min) {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function getAspectRatio() {
-	var pageWidth = window.innerWidth;
-	var pageHeight = window.innerHeight;
+	var pageWidth = window.outerWidth;
+	var pageHeight = window.outerWidth;
     if (pageWidth > pageHeight) {
     	var aspectRatio = pageWidth/pageHeight;
     } else if (pageHeight > pageWidth){
