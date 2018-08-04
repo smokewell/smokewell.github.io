@@ -188,15 +188,15 @@ header {
 }
 #header-section-left {
 	display: inline-block;
-	width: 25%;
+	width: 24%;
 }
 #header-section-center { 
 	display: inline-block;
-	width: 50%;
+	width: 52%;
 }
 #header-section-right {
 	display: inline-block;
-	width: 24%;
+	width: 23%;
 }
 #main-logo {
 	max-width: 25rem;
@@ -295,7 +295,7 @@ nav {
 	color: #2e2e2e;
 	font-weight: 600;
 	letter-spacing: .1rem;
-	padding: .5rem 4rem;
+	padding: .5rem 3rem;
 	cursor: pointer;
 }
 #nav-cart-link:hover,
@@ -303,9 +303,6 @@ nav {
 	transform: scale(1.05);
 	transition: all 50ms linear;
 	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
-}
-.nav-link:last-child {
-	display: none;
 }
 .topnav .icon {
 	display: none;

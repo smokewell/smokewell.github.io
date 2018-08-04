@@ -31,8 +31,8 @@ function positionHeader() {
 	}
 }
  function stopScroll() {
-	var screenWidth = screen.width;
-	if (screenWidth > 768) {
+	var pageWidth = window.innerWidth;
+	if (pageWidth > 768) {
 		positionHeader();
 	} 
 }
@@ -44,10 +44,10 @@ function positionHeader() {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function scaleRootSize(min) {
-	var vw = window.outerWidth/100;
-	var vh = window.outerHeight/100;
-	var pageWidth = window.outerWidth;
-	var pageHeight = window.outerHeight;
+	var vw = window.innerWidth/100;
+	var vh = window.innerHeight/100;
+	var pageWidth = window.innerWidth;
+	var pageHeight = window.innerHeight;
 	var aspectRatio = getAspectRatio();
 	console.log(aspectRatio);
 	if (pageWidth > pageHeight && vw > min) {
@@ -64,8 +64,8 @@ function scaleRootSize(min) {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function getAspectRatio() {
-	var pageWidth = window.outerWidth;
-	var pageHeight = window.outerHeight;
+	var pageWidth = window.innerWidth;
+	var pageHeight = window.innerHeight;
     if (pageWidth > pageHeight) {
     	var aspectRatio = pageWidth/pageHeight;
     } else if (pageHeight > pageWidth){
@@ -82,7 +82,7 @@ function getAspectRatio() {
 //////////////////////////////////////////////////////////////////////////////////////////////
 function navLinkDisplay() {
 	var navLink = document.getElementsByClassName("nav-link");
-	var pageWidth = window.outerWidth;
+	var pageWidth = window.innerWidth;
 	var linkCount = navLink.length;
 	var lastInArray = linkCount - 1;
 	if (pageWidth > 768) {
@@ -119,7 +119,7 @@ function openAccordionPanels() {
 
 function openCart() {
 	var cart = document.getElementById("cart-container");
-	var pageWidth = window.outerWidth;
+	var pageWidth = window.innerWidth;
 	document.body.style.overflowY = "hidden";
 	if (pageWidth > 768) {
 		cart.style.width = "50%";
@@ -130,7 +130,7 @@ function openCart() {
 
 function toggleCart() {
 	var cart = document.getElementById("cart-container");
-	var pageWidth = window.outerWidth;
+	var pageWidth = window.innerWidth;
 	document.body.style.overflowY = "scroll";
 	cart.style.transition = "all 250ms linear";
 	if (cart.style.width == "" || cart.style.width == "0px") {
@@ -142,7 +142,7 @@ function toggleCart() {
 
 function resizeCart() {
 	var cart = document.getElementById("cart-container");
-	var pageWidth = window.outerWidth;
+	var pageWidth = window.innerWidth;
 	document.body.style.overflowY = "scroll";
 	cart.style.transition = "all 0ms linear";
 	if (cart.style.width !== "" && cart.style.width !== "0px") {
@@ -152,9 +152,10 @@ function resizeCart() {
 
 function openNav() {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.outerWidth;
+	var pageWidth = window.innerWidth;
 	if (pageWidth > 768) {
 		menu.style.width = "90%";
+		document.body.style.overflowY = "scroll";
     } else {
     	menu.style.width = "100%";
     	document.body.style.overflowY = "hidden";
@@ -163,26 +164,26 @@ function openNav() {
 
 function toggleNav() {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.outerWidth;
-	document.body.style.overflowY = "scroll";
+	var pageWidth = window.innerWidth;
 	menu.style.transition = "all 250ms linear";
 	if (menu.style.width == "" || menu.style.width == "0px") {
 		openNav();
 	} else {
 		menu.style.width = "0px";
+		document.body.style.overflowY = "scroll";
 	}
 }
 
 function resizeNav(navWidth) {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.outerWidth;
-	document.body.style.overflowY = "scroll";
+	var pageWidth = window.innerWidth;
 	menu.style.transition = "all 0ms linear";
-	if (pageWidth <= 768 && menu.style.width == "90%") {
+	if ((pageWidth <= 768 && menu.style.width == "") || (pageWidth <= 768 && menu.style.width == "90%")) {
 		menu.style.width = "0px";
-		console.log("right here dumbass!");
+		document.body.style.overflowY = "scroll";
 	} else if (menu.style.width == "0px" && pageWidth <= 768) {
 		menu.style.width = "0px";
+		document.body.style.overflowY = "scroll";
 	} else {
 		openNav();
 	}
