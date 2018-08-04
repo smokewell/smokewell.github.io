@@ -164,6 +164,7 @@ li {
 header {
 	text-align: center;
 	width: 100%;
+	z-index: 999;
 }
 #special-message-box {
 	background-color: #2e2e2e;
@@ -307,6 +308,7 @@ nav {
 	border-bottom: solid 1px #afafaf;
 	margin: 0 auto;
     height: 100%;
+    background-color: #fff;
 }
 #mobile-nav-container {
 	display: flex;

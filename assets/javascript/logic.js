@@ -1,26 +1,30 @@
-// function positionHeader() {
-// 	var offset 	= window.pageYOffset;
-// 	var header = document.getElementById("header");
-// 	var menu = document.getElementById("menu-container");
-// 	var trigger = header.style.outerHeight - menu.style.outerHeight;
-// 	console.log(header.style.outerHeight);
-// 	if (offset >= trigger) {
-// 		header.style.position = "fixed";
-// 		header.style.marginTop = "-" + trigger + "px";
-// 		// spacer.style.height = trigger + "px";
-// 	} else {
-// 		header.style.position = "inherit";
-// 		header.style.marginTop = "0";
-// 		// spacer.style.height = "0";
-// 	}
-// }
+function positionHeader() {
+	var offset 	= window.pageYOffset;
+	var header = document.getElementById("header");
+	var spacer = document.getElementById("spacer");
+	var menu = document.getElementById("menu-container");
+	var rem = window.document.documentElement.style.fontSize;
+	var rem = rem.replace("px", "");
+	var x = 3 * rem;
+	var trigger = header.offsetHeight - menu.offsetHeight + 1;
+	var spacerHeight = x + trigger;
+	if (offset >= trigger) {
+		header.style.position = "fixed";
+		header.style.marginTop = "-" + trigger + "px";
+		spacer.style.height = spacerHeight + "px";
+	} else {
+		header.style.position = "inherit";
+		header.style.marginTop = "0";
+		spacer.style.height = "0";
+	}
+}
 
-// function stopScroll() {
-// 	var screenWidth = screen.width;
-// 	if (screenWidth > 768) {
-// 		positionHeader();
-// 	} 
-// }
+function stopScroll() {
+	var screenWidth = screen.width;
+	if (screenWidth > 768) {
+		positionHeader();
+	} 
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 //// THIS FUNCTION SETS THE VALUE OF REM BASED ON THE USER'S SCREEN SIZE AND ASPECT RATIO ////
@@ -168,9 +172,9 @@ window.addEventListener("load", function() {
     toggleAccordion();
 });
 
-// window.addEventListener("scroll", function() {
-// 	stopScroll();
-// });
+window.addEventListener("scroll", function() {
+	stopScroll();
+});
 
 window.addEventListener("resize", function() {
     scaleRootSize(8);

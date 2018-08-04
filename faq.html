@@ -12,64 +12,65 @@
     <link rel="icon" type="text/css" href="assets/images/icon.ico">
 </head>
 <body>
-	<div id="main-container">
-		<header>
-			<div id="special-message-box">
-				<h2 id="special-message">Free shipping on all orders!</h2>
+	<header id="header">
+		<div id="special-message-box">
+			<h2 id="special-message">Free shipping on all orders!</h2>
+		</div>
+		<div id="header-section-left">
+			<i id="nav-icon" class="fa fa-bars" onclick="toggleNav()"></i>
+		</div>
+		<div id="header-section-center">
+			<a href="index.html"><img id="main-logo" src="assets/images/logo.png" alt="Smokewell Apparel"></a>
+		</div>
+		<div id="header-section-right">
+			<div id="cart-icon-container" onclick="toggleCart()">
+				<i id="cart-icon" class="fa fa-shopping-cart" aria-hidden="true"></i>
+				<span id="cart-counter">2</span>
 			</div>
-			<div id="header-section-left">
-				<i id="nav-icon" class="fa fa-bars" onclick="toggleNav()"></i>
-			</div>
-			<div id="header-section-center">
-				<a href="index.html"><img id="main-logo" src="assets/images/logo.png" alt="Smokewell Apparel"></a>
-			</div>
-			<div id="header-section-right">
-				<div id="cart-icon-container" onclick="toggleCart()">
-					<i id="cart-icon" class="fa fa-shopping-cart" aria-hidden="true"></i>
-					<span id="cart-counter">2</span>
-				</div>
-			</div>
-			<div id="cart-container">
-				<i class="close-button fas fa-times" onclick="toggleCart()"></i>
-				<h2 id="cart-title">Shopping Cart</h2>
-				<ul id="cart">
-					<li class="cart-item clearfix">
-						<div class="cart-left-container">
-							<i class="cart-remove-button fas fa-times"></i>
-							<h3 class="cart-product-name">Stoned I Am - L</h3>
-							<div class="cart-product-info">1 x $19.99</div>
-						</div>
-						<img class="cart-product-image" src="assets/images/testproduct.jpg">
-					</li>
-					<li class="cart-item clearfix">
-						<div class="cart-left-container">
-							<i class="cart-remove-button fas fa-times"></i>
-							<h3 class="cart-product-name">Stoned I Am - L</h3>
-							<div class="cart-product-info">1 x $19.99</div>
-						</div>
-						<img class="cart-product-image" src="assets/images/testproduct.jpg">
-					</li>
-					<li class="cart-item clearfix">
-						<div id="cart-total"><span id="total-label">Total:</span> $39.98</div>
-					</li>
-				</ul>
-				<button id="cart-checkout-button">Proceed to Checkout</button>
-				<div id="cart-return" onclick="toggleCart()">Continue Shopping...</div>
-			</div>
-			<nav  id="menu-container">
-				<i id="menu-close-button" class="close-button fas fa-times" onclick="toggleNav()"></i>
-				<h2 id="menu-title">Menu</h2>
-				<div id="mobile-nav-container">
-					<a class="nav-link" href="index.html"><span class="nav-icons"><i class="fa fa-home"></i></span> Home</a>
-					<a class="nav-link" href="archive.html"><span class="nav-icons"><i class="fas fa-tshirt"></i></span> Shop T-Shirts</a>
+		</div>
+		<div id="cart-container">
+			<i class="close-button fas fa-times" onclick="toggleCart()"></i>
+			<h2 id="cart-title">Shopping Cart</h2>
+			<ul id="cart">
+				<li class="cart-item clearfix">
+					<div class="cart-left-container">
+						<i class="cart-remove-button fas fa-times"></i>
+						<h3 class="cart-product-name">Stoned I Am - L</h3>
+						<div class="cart-product-info">1 x $19.99</div>
+					</div>
+					<img class="cart-product-image" src="assets/images/testproduct.jpg">
+				</li>
+				<li class="cart-item clearfix">
+					<div class="cart-left-container">
+						<i class="cart-remove-button fas fa-times"></i>
+						<h3 class="cart-product-name">Stoned I Am - L</h3>
+						<div class="cart-product-info">1 x $19.99</div>
+					</div>
+					<img class="cart-product-image" src="assets/images/testproduct.jpg">
+				</li>
+				<li class="cart-item clearfix">
+					<div id="cart-total"><span id="total-label">Total:</span> $39.98</div>
+				</li>
+			</ul>
+			<button id="cart-checkout-button">Proceed to Checkout</button>
+			<div id="cart-return" onclick="toggleCart()">Continue Shopping...</div>
+		</div>
+		<nav  id="menu-container">
+			<i id="menu-close-button" class="close-button fas fa-times" onclick="toggleNav()"></i>
+			<h2 id="menu-title">Menu</h2>
+			<div id="mobile-nav-container">
+				<a class="nav-link" href="index.html"><span class="nav-icons"><i class="fa fa-home"></i></span> Home</a>
+				<a class="nav-link" href="archive.html"><span class="nav-icons"><i class="fas fa-tshirt"></i></span> Shop T-Shirts</a>
 <!-- 					<a class="nav-link" href=""><span class="nav-icons"><i class="fas fa-info"></i></span> About Us</a>
- -->					<a class="nav-link selected" href="faq.html"><span class="nav-icons"><i class="fas fa-question"></i></span> FAQ</a>
-					<a class="nav-link" href="contact.html"><span class="nav-icons"><i class="fas fa-comments"></i></span> Contact</a>
-					<a class="nav-link" href="checkout.html"><span class="nav-icons"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-counter">2</span></span> Checkout</a>
-				</div>
-				<div id="nav-return" onclick="toggleNav()">Continue Shopping...</div>
-			</nav>
-		</header>
+-->					<a class="nav-link selected" href="faq.html"><span class="nav-icons"><i class="fas fa-question"></i></span> FAQ</a>
+				<a class="nav-link" href="contact.html"><span class="nav-icons"><i class="fas fa-comments"></i></span> Contact</a>
+				<a class="nav-link" href="checkout.html"><span class="nav-icons"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-counter">2</span></span> Checkout</a>
+			</div>
+			<div id="nav-return" onclick="toggleNav()">Continue Shopping...</div>
+		</nav>
+	</header>
+	<div id="main-container">
+		<div id="spacer"></div>
 		<main id="main-content">
 			<h1 class="page-title">Frequently Asked Questions</h1>
 			<div id="faq-container">
