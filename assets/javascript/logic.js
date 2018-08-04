@@ -89,6 +89,7 @@ function navLinkDisplay() {
 		navLink[lastInArray].style.display = "none";
 	} else {
 		navLink[lastInArray].style.display = "block";
+		navLink[lastInArray].style.borderBottom = "none";
 	}
 	
 }
