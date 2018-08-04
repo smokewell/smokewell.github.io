@@ -213,6 +213,9 @@ header {
   	backface-visibility: hidden;
   	perspective: 1000px;
 }
+.cart-icon-hover,
+#nav-cart-link:hover ~ #cart-icon,
+#nav-cart-link:hover ~ #cart-counter,
 #cart-icon-container:hover #cart-icon, 
 #cart-icon-container:hover #cart-counter {
 	animation: money-hop 1s cubic-bezier(.36,.07,.19,.97) both;
@@ -287,6 +290,7 @@ nav {
 	font-weight: 600;
 	letter-spacing: .1rem;
 	padding: .5rem 4rem;
+	cursor: pointer;
 }
 .nav-link:hover {
 	transform: scale(1.05);
@@ -309,11 +313,14 @@ nav {
 	margin: 0 auto;
     height: 100%;
     background-color: #fff;
+    transition: width 250ms ease-out;
 }
 #mobile-nav-container {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 #nav-return {
 	display: none;
@@ -399,6 +406,7 @@ i.cart-remove-button {
 	right: 0px;
 	bottom:0;
 	position: fixed;
+	z-index: 1000;
 }
 #cart {
 	border: 1px solid #bababa;
@@ -475,6 +483,9 @@ i.cart-remove-button {
 	}
 	#archive-container {
 		margin: 0rem auto 3rem auto;
+	}
+	#nav-cart-link {
+		display: none;
 	}
 	.cart-product-image {
 		width: 6rem;
