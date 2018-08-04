@@ -59,26 +59,6 @@ li {
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
-/////// SPECIAL MESSAGE ////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////*/
-
-#special-message-box {
-	background-color: #2e2e2e;
-	width: 100%;
-	padding: .5rem 0;
-	text-align: center;
-}
-#special-message {
-	text-transform: uppercase;
-	font-size: 1.25rem;
-	color: white;
-	word-spacing: .5rem;
-    letter-spacing: .25rem;
-    font-weight: 600;
-    font-family: 'Liberator', sans-serif;
-}
-
-/*//////////////////////////////////////////////////////////////////////////////////
 /////// HOMEPAGE ///////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
 
@@ -182,8 +162,24 @@ li {
 //////////////////////////////////////////////////////////////////////////////////*/
 
 header {
-	padding-top: 1.5rem;
 	text-align: center;
+	width: 100%;
+}
+#special-message-box {
+	background-color: #2e2e2e;
+	width: 100%;
+	padding: .5rem 0;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+#special-message {
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	color: white;
+	word-spacing: .5rem;
+    letter-spacing: .25rem;
+    font-weight: 600;
+    font-family: 'Liberator', sans-serif;
 }
 #header-section-left {
 	display: inline-block;
@@ -260,6 +256,13 @@ footer {
 	font-size: 1.25rem;
 	letter-spacing: 1px;
 	font-family: 'Liberator', sans-serif;
+	text-decoration: none;
+}
+#copyright:hover {
+	color: #99ff11;
+}
+a:-webkit-any-link {
+	text-decoration: none;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
