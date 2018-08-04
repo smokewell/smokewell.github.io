@@ -247,6 +247,7 @@ header {
 	color: #2e2e2e;
 	font-size: 2.5rem;
 	display: none;
+	cursor: pointer;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -285,6 +286,7 @@ nav {
 .nav-icons {
 	display: none;
 }
+#nav-cart-link,
 .nav-link {
 	font-family: 'Liberator', sans-serif;
 	text-transform: uppercase;
@@ -296,10 +298,14 @@ nav {
 	padding: .5rem 4rem;
 	cursor: pointer;
 }
+#nav-cart-link:hover,
 .nav-link:hover {
 	transform: scale(1.05);
 	transition: all 50ms linear;
 	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+}
+.nav-link:last-child {
+	display: none;
 }
 .topnav .icon {
 	display: none;
@@ -318,6 +324,7 @@ nav {
 	margin: 0 auto;
     background-color: #fff;
     transition: width 250ms ease-out;
+    z-index: 999;
 }
 #mobile-nav-container {
 	display: flex;
@@ -520,6 +527,7 @@ i.cart-remove-button {
 		width: 6rem;
 		text-align: center;
 		color: #fff;
+		cursor: pointer;
 	}
 	.nav-link:last-child {
 		border-bottom: none;

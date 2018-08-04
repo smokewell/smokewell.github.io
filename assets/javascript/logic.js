@@ -80,6 +80,18 @@ function getAspectRatio() {
 //////////////////////////////////////////////////////////////////////////////////////////////
 ////// THIS FUNCTION RETURNS THE ASPECT RATIO OF THE USER'S DEVICE ///////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////
+function navLinkDisplay() {
+	var navLink = document.getElementsByClassName("nav-link");
+	var pageWidth = window.outerWidth;
+	var linkCount = navLink.length;
+	var lastInArray = linkCount - 1;
+	if (pageWidth > 768) {
+		navLink[lastInArray].style.display = "none";
+	} else {
+		navLink[lastInArray].style.display = "block";
+	}
+	
+}
 
 function toggleAccordion() {
 	var accordion = document.getElementsByClassName("accordion");
@@ -166,8 +178,9 @@ function resizeNav(navWidth) {
 	var pageWidth = window.outerWidth;
 	document.body.style.overflowY = "scroll";
 	menu.style.transition = "all 0ms linear";
-	if (menu.style.width == "" || (pageWidth <= 768 && menu.style.width == "90%")) {
+	if (pageWidth <= 768 && menu.style.width == "90%") {
 		menu.style.width = "0px";
+		console.log("right here dumbass!");
 	} else if (menu.style.width == "0px" && pageWidth <= 768) {
 		menu.style.width = "0px";
 	} else {
@@ -181,6 +194,7 @@ function resizeNav(navWidth) {
 window.addEventListener("load", function() {
     scaleRootSize(8);
     toggleAccordion();
+    navLinkDisplay();
 });
 
 window.addEventListener("scroll", function() {
@@ -192,6 +206,7 @@ window.addEventListener("resize", function() {
     resizeNav();
     resizeCart();
     openAccordionPanels();
+    navLinkDisplay();
 });
 
 
