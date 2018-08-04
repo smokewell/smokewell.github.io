@@ -5,6 +5,9 @@ function cartIconHover() {
     cartCounter.classList.toggle("cart-icon-hover");
 }
 ////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////
+
 function positionHeader() {
 	var offset 	= window.pageYOffset;
 	var header = document.getElementById("header");
@@ -14,21 +17,20 @@ function positionHeader() {
 	var rem = rem.replace("px", "");
 	var x = 3 * rem;
 	var trigger = header.offsetHeight - menu.offsetHeight + 1;
-	var spacerHeight = x + trigger;
+	var spacerHeight = x + trigger - (.5 * rem);
 	if (offset >= trigger) {
 		header.style.position = "fixed";
 		header.style.marginTop = "-" + trigger + "px";
 		spacer.style.height = spacerHeight + "px";
-		menu.style.width = "100%";
+		menu.style.padding = "0 5%";
 	} else {
 		header.style.position = "inherit";
 		header.style.marginTop = "0";
 		spacer.style.height = "0";
-		menu.style.width = "90%";
+		menu.style.padding = "0";
 	}
 }
-
-function stopScroll() {
+ function stopScroll() {
 	var screenWidth = screen.width;
 	if (screenWidth > 768) {
 		positionHeader();

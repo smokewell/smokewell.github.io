@@ -182,17 +182,21 @@ header {
     font-weight: 600;
     font-family: 'Liberator', sans-serif;
 }
+#inner-header-container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
 #header-section-left {
 	display: inline-block;
-	width: 27%;
+	width: 25%;
 }
 #header-section-center { 
 	display: inline-block;
-	width: 44%;
+	width: 50%;
 }
 #header-section-right {
 	display: inline-block;
-	width: 27%;
+	width: 24%;
 }
 #main-logo {
 	max-width: 25rem;
@@ -308,6 +312,7 @@ nav {
 }
 #menu-container {
 	width: 90%;
+	max-width: 1280px;
 	border-top: solid 1px #afafaf;
 	border-bottom: solid 1px #afafaf;
 	margin: 0 auto;
@@ -319,8 +324,6 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	max-width: 1280px;
-	margin: 0 auto;
 }
 #nav-return {
 	display: none;
