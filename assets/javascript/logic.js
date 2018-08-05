@@ -68,7 +68,7 @@ function scaleRootSize(min) {
 
 function getAspectRatio() {
 	var pageWidth = window.outerWidth;
-	var pageHeight = window.outerWidth;
+	var pageHeight = window.outerHeight;
     if (pageWidth > pageHeight) {
     	var aspectRatio = pageWidth/pageHeight;
     } else if (pageHeight > pageWidth){

@@ -314,6 +314,7 @@ nav {
 }
 #cart-counter-link {
 	display: none;
+	margin-left: .5rem;
 }
 #nav-cart-link:hover #cart-counter-link,
 #cart-counter-link:hover {
