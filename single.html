@@ -25,7 +25,7 @@
 		<div id="header-section-right">
 			<div id="cart-icon-container" onclick="toggleCart()">
 				<i id="cart-icon" class="fa fa-shopping-cart" aria-hidden="true"></i>
-				<span id="cart-counter">2</span>
+				<span id="cart-counter-icon" class="cart-counter">2</span>
 			</div>
 		</div>
 		<div id="cart-container">
@@ -64,9 +64,9 @@
 <!-- 					<a class="nav-link" href=""><span class="nav-icons"><i class="fas fa-info"></i></span> About Us</a>
 -->					<a class="nav-link" href="faq.html"><span class="nav-icons"><i class="fas fa-question"></i></span> FAQ</a>
 				<a class="nav-link" href="contact.html"><span class="nav-icons"><i class="fas fa-comments"></i></span> Contact</a>
-				<a class="nav-link" href="checkout.html"><span class="nav-icons"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-counter">2</span></span> Checkout</a>
+				<a class="nav-link" href="checkout.html"><span class="nav-icons"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="cart-counter">2</span></span> Checkout</a>
 
-				<div id="nav-cart-link" onmouseover="cartIconHover()" onmouseout="cartIconHover()" onclick="toggleCart()">Cart</div>
+				<div id="nav-cart-link" onmouseover="cartIconHover()" onmouseout="cartIconHover()" onclick="toggleCart()">Cart<span id="cart-counter-link" class="cart-counter">2</span></div>
 			</div>
 			<div id="nav-return" onclick="toggleNav()">Continue Shopping...</div>
 		</nav>

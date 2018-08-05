@@ -234,10 +234,8 @@ header {
   	perspective: 1000px;
 }
 .cart-icon-hover,
-#nav-cart-link:hover ~ #cart-icon,
-#nav-cart-link:hover ~ #cart-counter,
 #cart-icon-container:hover #cart-icon, 
-#cart-icon-container:hover #cart-counter {
+#cart-icon-container:hover #cart-counter-icon {
 	animation: money-hop 1s cubic-bezier(.36,.07,.19,.97) both;
   	transform: translate3d(0, 0, 0);
   	backface-visibility: hidden;
@@ -247,7 +245,7 @@ header {
 	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
 }
 
-#cart-counter {
+.cart-counter {
     background-color: #cc0000;
     border-radius: 1.6rem;
     width: 1.6rem;
@@ -313,6 +311,14 @@ nav {
 	letter-spacing: .1rem;
 	padding: .5rem 4rem;
 	cursor: pointer;
+}
+#cart-counter-link {
+	display: none;
+}
+#nav-cart-link:hover #cart-counter-link,
+#cart-counter-link:hover {
+	transform: none;
+	text-shadow: none;
 }
 #nav-cart-link:hover,
 .nav-link:hover {

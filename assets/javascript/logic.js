@@ -1,6 +1,6 @@
 function cartIconHover() {
     var cartIcon = document.getElementById("cart-icon");
-    var cartCounter = document.getElementById("cart-counter");
+    var cartCounter = document.getElementById("cart-counter-icon");
     cartIcon.classList.toggle("cart-icon-hover");
     cartCounter.classList.toggle("cart-icon-hover");
 }
@@ -13,6 +13,7 @@ function positionHeader() {
 	var header = document.getElementById("header");
 	var spacer = document.getElementById("spacer");
 	var menu = document.getElementById("menu-container");
+	var counter = document.getElementById("cart-counter-link");
 	var rem = window.document.documentElement.style.fontSize;
 	var rem = rem.replace("px", "");
 	var x = 3 * rem;
@@ -23,11 +24,13 @@ function positionHeader() {
 		header.style.marginTop = "-" + trigger + "px";
 		spacer.style.height = spacerHeight + "px";
 		menu.style.padding = "0 5%";
+		counter.style.display = "inline-block";
 	} else {
 		header.style.position = "inherit";
 		header.style.marginTop = "0";
 		spacer.style.height = "0";
 		menu.style.padding = "0";
+		counter.style.display = "none";
 	}
 }
  function stopScroll() {
@@ -45,9 +48,9 @@ function positionHeader() {
 
 function scaleRootSize(min) {
 	var vw = window.outerWidth/100;
-	var vh = window.outerWidth/100;
+	var vh = window.outerHeight/100;
 	var pageWidth = window.outerWidth;
-	var pageHeight = window.outerWidth;
+	var pageHeight = window.outerHeight;
 	var aspectRatio = getAspectRatio();
 	console.log(aspectRatio);
 	if (pageWidth > pageHeight && vw > min) {
