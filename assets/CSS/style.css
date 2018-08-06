@@ -36,6 +36,7 @@ li {
 	position: absolute;
 	top: 0;
 	right: 0;
+	text-align: center;
 }
 .close-button:hover {
 	transform: rotate(90deg);
@@ -256,6 +257,7 @@ header {
     color: #fff;
     vertical-align: top;
     position: absolute;
+    text-align: center;
 }
 #nav-icon {
 	color: #2e2e2e;
@@ -315,6 +317,7 @@ nav {
 #cart-counter-link {
 	display: none;
 	margin-left: .5rem;
+	font-weight: 400;
 }
 #nav-cart-link:hover #cart-counter-link,
 #cart-counter-link:hover {
@@ -387,6 +390,7 @@ i.cart-remove-button {
  	display: inline-block;
  	margin-right: 1rem;
  	cursor: pointer;
+ 	text-align: center;
 }
 .cart-remove-button:hover {
 	transform: rotate(90deg);
@@ -641,6 +645,9 @@ i.cart-remove-button {
 	    font-size: 2rem;
 	    letter-spacing: .1rem;
 	    text-decoration: none;
+	}
+	#copyright {
+		color: #99ff11;
 	}
 	#shirt-icon {
 		margin-right: 2rem;

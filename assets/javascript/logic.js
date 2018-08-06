@@ -17,7 +17,7 @@ function positionHeader() {
 	var rem = window.document.documentElement.style.fontSize;
 	var rem = rem.replace("px", "");
 	var x = 3 * rem;
-	var trigger = header.offsetHeight - menu.offsetHeight + 1;
+	var trigger = header.offsetHeight - menu.offsetHeight;
 	var spacerHeight = x + trigger - (.5 * rem);
 	if (offset >= trigger) {
 		header.style.position = "fixed";
