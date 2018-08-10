@@ -69,8 +69,8 @@ textarea:focus {
 }
 #main-container {
 	width: 100%;
-	max-width: 1280px;
-	margin: 0 auto;
+/*	max-width: 1280px;
+*/	margin: 0 auto;
 	flex: 1;
 }
 
@@ -260,8 +260,8 @@ header {
     font-family: 'Liberator', sans-serif;
 }
 #inner-header-container {
-	max-width: 1280px;
-	margin: 0 auto;
+/*	max-width: 1280px;
+*/	margin: 0 auto;
 }
 #header-section-left {
 	display: inline-block;
@@ -404,8 +404,8 @@ nav {
 }
 #menu-container {
 	width: 90%;
-	max-width: 1280px;
-	border-top: solid 1px #afafaf;
+/*	max-width: 1280px;
+*/	border-top: solid 1px #afafaf;
 	border-bottom: solid 1px #afafaf;
 	margin: 0 auto;
     background-color: #fff;
