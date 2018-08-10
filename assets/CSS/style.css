@@ -5,14 +5,29 @@
 html {
 	font-size: 1rem;
 	font-family: 'Liberator', sans-serif;
+	box-sizing: border-box;
 }
 body {
 	display: flex;
   	min-height: 100vh;
   	flex-direction: column;
+  	box-sizing: border-box;
 }
 li {
 	text-decoration: none;
+}
+input,
+textarea {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+	outline: 1px solid #afafaf;
+}
+input:focus,
+textarea:focus {
+	outline: none;
+	border: 1px solid #afafaf;
 }
 .click-me {
 	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
@@ -161,18 +176,63 @@ li {
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// CONTACT ////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
-
 #contact-container {
 	font-size: 1.25rem;
 	background-color: #eee;
     color: #2e2e2e;
     width: 90%;
-    height: 250px;
 	display: block;
 	margin: 3rem auto;
 	border: solid 1px #afafaf;
 	border-radius: 12px;
+    font-family: 'Liberator', sans-serif;
 }
+.form-label {
+	font-weight: 600;
+	display: block;
+	margin: 2rem 0 1rem 0;
+}
+.form-label:first-child {
+	margin-top: 0;
+}
+.form-field {
+	width: 100%;
+	display: block;
+	border: none;
+	padding: .5rem 1rem;
+	font-family: 'Liberator', sans-serif;
+	font-size: 1.25rem;
+	color: #2e2e2e;
+}
+#contact-form {
+	width: 90%;
+	margin: 2rem auto;
+}
+#message {
+	min-height: 6rem;
+}
+#contact-submit-button {
+	float: right;
+	margin-top: 2rem;
+	min-width: 20%;
+	text-transform: uppercase;
+	color: #2e2e2e;
+	background-color: #fff;
+    letter-spacing: .25rem;
+    font-weight: 600;
+    font-family: 'Liberator', sans-serif;
+	border: 1px solid #2e2e2e;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    padding: .5rem 0;
+    outline: none;
+    cursor: pointer;
+    max-width: 33%;
+}
+#contact-submit-button:hover {
+	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+}
+
 
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// HEADER /////////////////////////////////////////////////////////////////////
@@ -515,7 +575,6 @@ i.cart-remove-button {
 	    padding: 1rem 0;
 	    background-color: transparent;
 	    margin: 0 auto;
-	    text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
 	}
 	#archive-container {
 		margin: 0rem auto 3rem auto;
@@ -691,6 +750,9 @@ i.cart-remove-button {
 @media screen and (orientation: portrait) and (max-width: 768px){
 	#cart-checkout-button {
 		margin: 3rem auto 4rem auto;
+	}
+	#contact-submit-button {
+		max-width: 100%;
 	}
 	.nav-link {
 		padding: 2rem 1rem;

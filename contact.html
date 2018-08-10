@@ -75,7 +75,23 @@
 		<div id="spacer"></div>
 		<main id="main-content">
 			<h1 class="page-title">Send Us A Message</h1>
-			<div id="contact-container"></div>
+			<div id="contact-container" class="clearfix">
+			 	<form id="contact-form" class="clearfix" action="">
+				    <label class="form-label" for="name">Name (required)</label>
+				    <input class="form-field" type="text" id="name" name="name" placeholder="">
+
+				    <label class="form-label" for="email">Email (required)</label>
+				    <input class="form-field" type="text" id="email" name="email" placeholder="">				    
+
+				    <label class="form-label" for="phone-number">Phone Number (optional)</label>
+				    <input class="form-field" type="text" id="phone-number" name="phone-number" placeholder="">
+
+				    <label class="form-label" for="message">Message (required)</label>
+				    <textarea class="form-field" id="message" name="message" placeholder=""></textarea>
+
+				    <input id="contact-submit-button" type="submit" value="Send Message">
+				</form>
+			</div>
 		</main>
 	</div>
 	<footer>

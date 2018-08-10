@@ -17,7 +17,7 @@ function positionHeader() {
 	var rem = window.document.documentElement.style.fontSize;
 	var rem = rem.replace("px", "");
 	var x = 3 * rem;
-	var trigger = header.offsetHeight - menu.offsetHeight;
+	var trigger = header.offsetHeight - menu.offsetHeight + 1;
 	var spacerHeight = x + trigger - (.5 * rem);
 	if (offset >= trigger) {
 		header.style.position = "fixed";
@@ -182,6 +182,7 @@ function resizeNav(navWidth) {
 	var menu = document.getElementById("menu-container");
 	var pageWidth = window.innerWidth;
 	menu.style.transition = "all 0ms linear";
+	menu.style.padding = "0";
 	if ((pageWidth <= 768 && menu.style.width == "") || (pageWidth <= 768 && menu.style.width == "90%")) {
 		menu.style.width = "0px";
 		document.body.style.overflowY = "scroll";
