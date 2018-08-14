@@ -6,6 +6,22 @@ function cartIconHover() {
 }
 ////////////////////////////////////////////////////////////////////
 
+function positionCartIcon() {
+	var navCartLink = document.getElementById("nav-cart-link");
+	var cartIconContainer = document.getElementById("cart-icon-container");
+	var headerSectionRight = document.getElementById("header-section-right");
+	var pageWidth = window.innerWidth;
+	var marginRight = pageWidth * .05;
+	var mobileNavContainer = document.getElementById("mobile-nav-container");
+	var mobileNavDisplay = window.getComputedStyle(mobileNavContainer,null).getPropertyValue("display");
+	if (mobileNavDisplay == "flex") {
+		cartIconContainer.style.width = navCartLink.offsetWidth + "px";
+		headerSectionRight.style.paddingLeft = headerSectionRight.offsetWidth - cartIconContainer.offsetWidth - marginRight + "px";
+	} else {
+		cartIconContainer.style.width = "";
+		headerSectionRight.style.paddingLeft = "0";
+	}
+}
 ////////////////////////////////////////////////////////////////////
 
 function positionHeader() {
@@ -34,8 +50,9 @@ function positionHeader() {
 	}
 }
  function stopScroll() {
-	var pageWidth = window.innerWidth;
-	if (pageWidth > 768) {
+	var mobileNavContainer = document.getElementById("mobile-nav-container");
+	var mobileNavDisplay = window.getComputedStyle(mobileNavContainer,null).getPropertyValue("display");
+	if (mobileNavDisplay == "flex") {
 		positionHeader();
 	} 
 }
@@ -47,15 +64,14 @@ function positionHeader() {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 function scaleRootSize(min) {
-	var vw = window.outerWidth/100;
-	var vh = window.outerHeight/100;
 	var pageWidth = window.outerWidth;
 	var pageHeight = window.outerHeight;
+	var vw = pageWidth/100;
+	var vh = pageHeight/100;
 	var aspectRatio = getAspectRatio();
-	console.log(aspectRatio);
 	if (pageWidth > pageHeight && vw > min) {
 		window.document.documentElement.style.fontSize = vw + "px";
-	} else if (vh + aspectRatio > min) {
+	} else if ((vh + aspectRatio) > min) {
 		window.document.documentElement.style.fontSize = vh + aspectRatio + "px";
 	} else {
 		window.document.documentElement.style.fontSize = min + "px";
@@ -85,10 +101,11 @@ function getAspectRatio() {
 //////////////////////////////////////////////////////////////////////////////////////////////
 function navLinkDisplay() {
 	var navLink = document.getElementsByClassName("nav-link");
-	var pageWidth = window.innerWidth;
 	var linkCount = navLink.length;
 	var lastInArray = linkCount - 1;
-	if (pageWidth > 768) {
+	var mobileNavContainer = document.getElementById("mobile-nav-container");
+	var mobileNavDisplay = window.getComputedStyle(mobileNavContainer,null).getPropertyValue("display");
+	if (mobileNavDisplay == "flex") {
 		navLink[lastInArray].style.display = "none";
 	} else {
 		navLink[lastInArray].style.display = "block";
@@ -124,8 +141,9 @@ function openAccordionPanels() {
 function openCart() {
 	var cart = document.getElementById("cart-container");
 	var pageWidth = window.innerWidth;
-	document.body.style.overflowY = "hidden";
-	if (pageWidth > 768) {
+	var mobileNavContainer = document.getElementById("mobile-nav-container");
+	var mobileNavDisplay = window.getComputedStyle(mobileNavContainer,null).getPropertyValue("display");
+	if (mobileNavDisplay == "flex") {
 		cart.style.width = "50%";
 	} else {
 		cart.style.width = "100%";
@@ -156,8 +174,9 @@ function resizeCart() {
 
 function openNav() {
 	var menu = document.getElementById("menu-container");
-	var pageWidth = window.innerWidth;
-	if (pageWidth > 768) {
+	var mobileNavContainer = document.getElementById("mobile-nav-container");
+	var mobileNavDisplay = window.getComputedStyle(mobileNavContainer,null).getPropertyValue("display");
+	if (mobileNavDisplay == "flex") {
 		menu.style.width = "90%";
 		document.body.style.overflowY = "scroll";
     } else {
@@ -183,10 +202,12 @@ function resizeNav(navWidth) {
 	var pageWidth = window.innerWidth;
 	menu.style.transition = "all 0ms linear";
 	menu.style.padding = "0";
-	if ((pageWidth <= 768 && menu.style.width == "") || (pageWidth <= 768 && menu.style.width == "90%")) {
+	var mobileNavContainer = document.getElementById("mobile-nav-container");
+	var mobileNavDisplay = window.getComputedStyle(mobileNavContainer,null).getPropertyValue("display");
+	if ((mobileNavDisplay == "block" && menu.style.width == "") || (mobileNavDisplay == "block" && menu.style.width == "90%")) {
 		menu.style.width = "0px";
 		document.body.style.overflowY = "scroll";
-	} else if (menu.style.width == "0px" && pageWidth <= 768) {
+	} else if (menu.style.width == "0px" && mobileNavDisplay == "block") {
 		menu.style.width = "0px";
 		document.body.style.overflowY = "scroll";
 	} else {
@@ -201,6 +222,7 @@ window.addEventListener("load", function() {
     scaleRootSize(8);
     toggleAccordion();
     navLinkDisplay();
+    positionCartIcon();
 });
 
 window.addEventListener("scroll", function() {
@@ -213,6 +235,7 @@ window.addEventListener("resize", function() {
     resizeCart();
     openAccordionPanels();
     navLinkDisplay();
+    positionCartIcon();
 });
 
 

@@ -5,13 +5,17 @@
 html {
 	font-size: 1rem;
 	font-family: 'Liberator', sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
 	box-sizing: border-box;
 }
 body {
 	display: flex;
   	min-height: 100vh;
   	flex-direction: column;
-  	box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
 }
 li {
 	text-decoration: none;
@@ -69,8 +73,7 @@ textarea:focus {
 }
 #main-container {
 	width: 100%;
-/*	max-width: 1280px;
-*/	margin: 0 auto;
+	margin: 0 auto;
 	flex: 1;
 }
 
@@ -260,23 +263,32 @@ header {
     font-family: 'Liberator', sans-serif;
 }
 #inner-header-container {
-/*	max-width: 1280px;
-*/	margin: 0 auto;
+	margin: 0 auto;
 }
 #header-section-left {
 	display: inline-block;
 	width: 25%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
 }
 #header-section-center { 
 	display: inline-block;
 	width: 50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
 }
 #header-section-right {
 	display: inline-block;
 	width: 24%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
 }
 #main-logo {
-	max-width: 25rem;
+	width: 25rem;
+	max-width: 100%;
 }
 #main-logo:hover {
 	transform: scale(1.05);
@@ -373,6 +385,7 @@ nav {
 	letter-spacing: .1rem;
 	padding: .5rem 4rem;
 	cursor: pointer;
+	display: inline-block;
 }
 #cart-counter-link {
 	display: none;
@@ -404,8 +417,7 @@ nav {
 }
 #menu-container {
 	width: 90%;
-/*	max-width: 1280px;
-*/	border-top: solid 1px #afafaf;
+	border-top: solid 1px #afafaf;
 	border-bottom: solid 1px #afafaf;
 	margin: 0 auto;
     background-color: #fff;
@@ -742,6 +754,7 @@ i.cart-remove-button {
 }
 
 @media screen and (orientation: portrait) {
+	#nav-cart-link,
 	.nav-link {
 		padding: .5rem 2rem;
 	}
@@ -764,8 +777,8 @@ i.cart-remove-button {
 		margin-bottom: 8rem;
 	}
 	#nav-icon {
-		margin: 12rem 0 3rem 0;
-		padding-left: 2rem;
+    margin: 8rem 0 0 0;
+    padding: 4rem 0 3rem 2rem;
 	}
 	#cart-icon-container {
 		margin: 12rem 0 3rem 0;
