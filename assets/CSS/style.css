@@ -66,7 +66,7 @@ textarea:focus {
     font-family: 'Liberator', sans-serif;
     color: #2e2e2e;
     letter-spacing: .1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 3rem auto 0 auto;
     text-align: center;
     text-transform: uppercase;
@@ -123,6 +123,97 @@ textarea:focus {
     font-weight: 600;
     font-family: 'Liberator', sans-serif;
 }
+
+/*//////////////////////////////////////////////////////////////////////////////////
+/////// SINGLE /////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////*/
+
+#single-container {
+	width: 90%;
+    margin: 3rem auto;
+}
+#single-image {
+	width: 100%;
+}
+/*#single-image:hover {
+	transform: scale(1.2);
+	transition: all 150ms linear;
+}*/
+#single-container-left {
+	width: 50%;
+	float: left;
+	min-width: 300px;
+}
+#single-container-right {
+	width: 50%;
+	float: right;
+	min-width: 300px;
+}
+#single-info-container {
+	width: 66.66%;
+	min-width: 202px;
+	margin: 0 auto;
+}
+#single-price {
+	color: #009c56;
+}
+#add-to-cart {
+	color: #009c56;
+	font-weight: 600;
+	font-family: 'Liberator', sans-serif;
+	height: 4rem;
+    cursor: pointer;
+    line-height: 4rem; 
+    font-size: 2rem;
+    border: 1px solid #2e2e2e;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+#add-to-cart:hover {
+	background-color: #009c56;
+	color: #fff;
+	transition: all 100ms linear;
+}
+.single-label {
+	color: #2e2e2e;
+	font-weight: 600;
+	font-family: 'Liberator', sans-serif;
+	font-size: 1.5rem;
+	display: block;
+	margin: 2rem 0 1rem 0;
+}
+.single-size {
+	display: inline-block;
+    border: 1px solid #2e2e2e;
+    border-radius: 8px;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    color: #009c56;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-right: .5rem;
+    font-weight: 600;
+    font-family: 'Liberator', sans-serif;
+}
+.single-size:hover {
+	transform: scale(1.05);
+	transition: all 150ms linear;
+}
+#single-quantity {
+	border: 1px solid #afafaf;
+    border-radius: 8px;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
+}
+
 /*//////////////////////////////////////////////////////////////////////////////////
 /////// FAQ ////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////*/
@@ -750,6 +841,23 @@ i.cart-remove-button {
 	}
 	.archive-product-title {
 		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#single-container-left {
+		width: 100%;
+		float: none;
+	}
+	#single-container-right {
+		width: 100%;
+		float: none;
+	}
+	#single-container {
+		width: 100%;
+	}
+	#single-info-container {
+		width: 33.33%;
 	}
 }
 
