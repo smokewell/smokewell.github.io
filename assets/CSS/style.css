@@ -105,12 +105,14 @@ textarea:focus {
 	margin: 1rem 0;
 	cursor: pointer;
 }
-.archive-product-container:hover {
+/*.archive-product-container:hover {
 	transform: scale(1.05);
 	transition: all 150ms linear;
-}
+}*/
 .archive-product-container:hover .archive-product-title {
-	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+	background-color: #009c56;
+	color: #fff;
+	transition: all 100ms linear;
 }
 .archive-product-image {
 	width: 95%;
@@ -118,10 +120,16 @@ textarea:focus {
 .archive-product-title {
 	text-transform: uppercase;
 	font-size: 1.5rem;
-	color: #2e2e2e;
+	color: #009c56;
     letter-spacing: .25rem;
     font-weight: 600;
     font-family: 'Liberator', sans-serif;
+    border: 1px solid #2e2e2e;
+	width: 90%;
+	border-radius: 8px;
+	padding: 1rem 0;
+	background-color: transparent;
+	margin: 0 auto;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////
@@ -221,7 +229,7 @@ textarea:focus {
 .accordion {
 	font-size: 1.25rem;
 	background-color: #eee;
-    color: #2e2e2e;
+    color: #009c56;
     cursor: pointer;
     padding: .5rem 1.5rem;
     width: 100%;
@@ -237,7 +245,7 @@ textarea:focus {
 }
 .accordion:hover {
 	color: #fff;
-	background-color: #2e2e2e;
+	background-color: #009c56;
 }
 .panel {
     max-height: 0;
@@ -310,7 +318,7 @@ textarea:focus {
 	margin-top: 2rem;
 	min-width: 20%;
 	text-transform: uppercase;
-	color: #2e2e2e;
+	color: #009c56;
 	background-color: #fff;
     letter-spacing: .25rem;
     font-weight: 600;
@@ -324,7 +332,9 @@ textarea:focus {
     max-width: 33%;
 }
 #contact-submit-button:hover {
-	text-shadow: 1px 0 0 #99ff11, -1px 0 0 #99ff11, 0 1px 0 #99ff11, 0 -1px 0 #99ff11, 1px 1px #99ff11, -1px -1px 0 #99ff11, 1px -1px 0 #99ff11, -1px 1px 0 #99ff11;
+	color: #fff;
+	background-color: #009c56;
+	transition: all 150ms linear;
 }
 
 
@@ -633,6 +643,7 @@ i.cart-remove-button {
 #cart-checkout-button:hover {
 	font-size: 2.1rem;
 	padding: .95rem;
+	background-color: #000;
 	transition: all 150ms linear;
 }
 #cart-title {
